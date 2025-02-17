@@ -17,8 +17,6 @@ if lang1 == "EN":
     file.write(password1)
     file.close()
     os.system("start.bat")
-    time.sleep(1)
-    sys.exit()
 if lang1 == "RU":
     direct1 = input("Укажите директорию установки CS:GO Legacy: ")
     file = open('directory_for_install_CSGO_Legacy.txt','w')
@@ -33,8 +31,7 @@ if lang1 == "RU":
     file.write(password1)
     file.close()
     os.system("start.bat")
-    time.sleep(1)
-    sys.exit()
+    os.system("download_second_depot.bat")
 else:
     print("An unknown language has been selected! Try again!")
     time.sleep(2)
