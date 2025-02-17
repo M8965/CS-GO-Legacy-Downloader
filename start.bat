@@ -26,6 +26,8 @@ for /f "usebackq delims=" %%a in ("%password_file%") do (
 
 start .\DepotDownloader.exe -app 730 -depot 732 -manifest 6314304446937576250 -beta csgo_legacy -dir "%install_directory%" -username %login% -password %password%
 
+pause
+
 endlocal
 
 start start2.bat
