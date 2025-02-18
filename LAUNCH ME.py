@@ -2,7 +2,10 @@ import sys
 import time
 import os
 
-lang1 = input("Choose a language(EN, RU): ")
+lang1 = input("Choose a language:\n"
+              "EN (English),\n"
+              "RU (Русский)\n"
+              )
 if lang1 == "EN":
     direct1 = input("Specify the CS:GO Legacy installation directory: ")
     file = open('directory_for_install_CSGO_Legacy.txt','w')
