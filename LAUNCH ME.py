@@ -16,7 +16,16 @@ if lang1 == "EN":
     file = open('password_for_install_CSGO_Legacy.txt','w')
     file.write(password1)
     file.close()
-    os.system("start.bat")
+    invent1 = input("Do you want to regain access to your inventory?(Yes or No): ")
+    if invent1 == "Yes":
+        os.system("start.bat")
+        os.system("download_second_depot.bat")
+        os.system("return_inventory.py")
+    if invent1 == "No":
+        os.system("start.bat")
+        os.system("download_second_depot.bat")
+    else:
+        sys.exit()
 if lang1 == "RU":
     direct1 = input("Укажите директорию установки CS:GO Legacy: ")
     file = open('directory_for_install_CSGO_Legacy.txt','w')
@@ -30,8 +39,17 @@ if lang1 == "RU":
     file = open('password_for_install_CSGO_Legacy.txt','w')
     file.write(password1)
     file.close()
-    os.system("start.bat")
-    os.system("download_second_depot.bat")
+    invent1 = input("Вы хотите вернуть доступ к инвентарю?(Да или Нет): ")
+    if invent1 == "Да":
+        os.system("start.bat")
+        os.system("download_second_depot.bat")
+        os.system("return_inventory.py")
+    if invent1 == "Нет":
+        os.system("start.bat")
+        os.system("download_second_depot.bat")
+    else:
+        sys.exit()
+    
 else:
     print("An unknown language has been selected! Try again!")
     time.sleep(2)
