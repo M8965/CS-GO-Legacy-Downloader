@@ -5,7 +5,6 @@ import subprocess
 import threading
 import sys
 
-# For shortcut creation
 try:
     import win32com.client
 except ImportError:
